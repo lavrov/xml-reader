@@ -14,9 +14,6 @@ package object reader {
 
   type Result[A] = ValidatedNel[ReaderError, A]
 
-  def Reader[A](f: NodeSeq => Result[A]): Reader[A] = Kleisli(f)
-
-  def PureReader[A](a: A) = Reader(_ => valid(a))
 
   def valid[A](a: A): Result[A] = Validated.valid(a)
 

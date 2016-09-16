@@ -15,7 +15,7 @@ object GenericReader {
     (__ \ witness.value.name).read[V].asInstanceOf[Reader[FieldType[K, V]]]
   }
 
-  implicit def hNilReader: Reader[HNil] = PureReader(HNil)
+  implicit def hNilReader: Reader[HNil] = Reader.pure(HNil)
 
   implicit def hListReader[H, T <: HList](
       implicit

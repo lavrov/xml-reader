@@ -9,4 +9,6 @@ object Reader {
 
   def pure[A](a: A) = Reader(_ => valid(a))
 
+  def reader[A: Reader] = implicitly[Reader[A]]
+
 }

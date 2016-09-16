@@ -13,7 +13,7 @@ class GenericReaderSpec extends WordSpec {
 
       import GenericReader._
 
-      val reader = implicitly[Reader[Book]]
+      val reader = Reader.reader[Book]
 
       val result =
         reader(

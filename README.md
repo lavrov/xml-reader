@@ -8,7 +8,7 @@ import cats.syntax.cartesian._
 
 case class Author(name: String)
 case class Book(title: String, year: Int, author: List[Author])
-case class Library(books: List[Book])
+case class Library(book: List[Book])
 
 implicit val authorReader: Reader[Author] = 
   __.read[String] map Author
@@ -18,7 +18,7 @@ implicit val bookReader: Reader[Book] =
   (__ \ "year").read[Int] |@|
   (__ \ "author").read[List[Author]] map Book
   
-implicit val libraryReader: Reader[Library] = 
+val libraryReader: Reader[Library] = 
   (__ \ "book").read[List[Book]] map Library
   
 libraryReader(
@@ -32,4 +32,19 @@ libraryReader(
     </book>
   </library>
 )
+```
+
+The same result could have been achieved with:
+
+```scala
+import com.github.lavrov.xml.reader._
+import GenericReader._
+
+implicit val authorReader: Reader[Author] = 
+  __.read[String] map Author
+  
+implicit val bookReader = Reader.reader[Book]
+
+val libraryReader = Reader.reader[Library]
+
 ```

@@ -24,7 +24,7 @@ case class XmlPath(path: List[String]) {
     list[A].andThen(r => valid(r.headOption))
 
   def first[A](implicit reader: Reader[A]): Reader[A] =
-    optional[A].andThen(_ map valid getOrElse invalidOn(this, s"node not found"))
+    optional[A].andThen(_ map valid getOrElse invalid(s"node not found", this))
 
   @inline def apply[A](implicit reader: Reader[A]) = read[A]
 }

@@ -20,9 +20,8 @@ package object reader {
 
   def valid[A](a: A): Result[A] = Validated.valid(a)
 
-  def invalid(error: String): Result[Nothing] = invalidOn(XmlPath.__, error)
-
-  def invalidOn(path: XmlPath, error: String): Result[Nothing] =  Validated.invalidNel(ReaderError(path, error))
+  def invalid(error: String, path: XmlPath = XmlPath.__): Result[Nothing] =
+    Validated invalidNel ReaderError(path, error)
 
   implicit val resultMonad = new FlatMap[Result] {
 

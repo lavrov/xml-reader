@@ -48,3 +48,5 @@ implicit val bookReader = Reader.reader[Book]
 val libraryReader = Reader.reader[Library]
 
 ```
+
+Thanks to [davegurnell](https://github.com/davegurnell) for his awesome [shapeless guide](https://github.com/davegurnell/shapeless-guide).

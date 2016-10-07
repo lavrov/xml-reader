@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lavrov/xml-reader.svg?branch=master)](https://travis-ci.org/lavrov/xml-reader)
+
 # xml-reader
 Xml reader helps to convert xml documents into domain classes.
 

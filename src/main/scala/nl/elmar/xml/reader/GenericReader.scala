@@ -1,7 +1,7 @@
-package com.github.lavrov.xml.reader
+package nl.elmar.xml.reader
 
 import cats.Applicative
-import com.github.lavrov.xml.reader.XmlPath.__
+import XmlPath.__
 import shapeless.labelled.FieldType
 import shapeless.{::, HList, HNil, LabelledGeneric, Witness}
 

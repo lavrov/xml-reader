@@ -1,4 +1,4 @@
-package com.github.lavrov.xml.reader
+package nl.elmar.xml.reader
 
 import org.scalatest.WordSpec
 import org.scalatest.Matchers._

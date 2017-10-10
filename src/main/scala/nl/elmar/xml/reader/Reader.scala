@@ -1,4 +1,4 @@
-package com.github.lavrov.xml.reader
+package nl.elmar.xml.reader
 
 import cats.data.Kleisli
 

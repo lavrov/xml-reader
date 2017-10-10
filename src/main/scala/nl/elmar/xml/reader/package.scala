@@ -1,4 +1,4 @@
-package com.github.lavrov.xml
+package nl.elmar.xml
 
 import cats.FlatMap
 import cats.data.{Kleisli, Validated, ValidatedNel}

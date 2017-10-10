@@ -4,7 +4,7 @@
 Xml reader helps to convert xml documents into domain classes.
 
 ```scala
-import com.github.lavrov.xml.reader._
+import nl.elmar.xml.reader._
 import XmlPath._
 import cats.syntax.cartesian._
 
@@ -39,7 +39,7 @@ libraryReader(
 The same result could have been achieved with:
 
 ```scala
-import com.github.lavrov.xml.reader._
+import nl.elmar.xml.reader._
 import GenericReader._
 
 implicit val authorReader: Reader[Author] = 

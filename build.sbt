@@ -2,8 +2,6 @@ name := "xml-reader"
 
 organization := "nl.elmar"
 
-version := "0.4"
-
 scalaVersion := "2.12.3"
 
 crossScalaVersions := Seq("2.11.8", scalaVersion.value)

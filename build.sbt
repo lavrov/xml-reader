@@ -5,6 +5,7 @@ organization := "com.github.lavrov"
 version := "0.2"
 
 scalaVersion := "2.12.3"
+crossScalaVersions := Seq("2.11.8", scalaVersion.value)
 
 libraryDependencies ++= Seq(
   "org.typelevel" %% "cats" % "0.9.0",

@@ -1,6 +1,6 @@
 package nl.elmar.xml.reader
 
-import cats.{Applicative, Show}
+import cats.{ Show, Traverse}
 import cats.instances.list._
 
 case class XmlPath(path: List[String]) {
@@ -16,7 +16,7 @@ case class XmlPath(path: List[String]) {
 
   def list[A](implicit reader: Reader[A]) = read(
     Reader( nodeSeq =>
-      Applicative[Result].sequence(nodeSeq.toList map reader.run)
+      Traverse[List].sequence(nodeSeq.toList map reader.run)
     )
   )
 

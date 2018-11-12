@@ -2,14 +2,14 @@ name := "xml-reader"
 
 organization := "nl.elmar"
 
-scalaVersion := "2.12.6"
+scalaVersion := "2.12.7"
 
-crossScalaVersions := Seq("2.11.11", scalaVersion.value)
+crossScalaVersions := Seq("2.11.12", scalaVersion.value)
 
 libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % "1.1.0",
   "com.chuusai" %% "shapeless" % "2.3.3",
-  "org.scala-lang.modules" %% "scala-xml" % "1.0.6",
+  "org.scala-lang.modules" %% "scala-xml" % "1.1.1",
   "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 )
 
